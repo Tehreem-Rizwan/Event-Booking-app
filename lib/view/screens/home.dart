@@ -1,6 +1,7 @@
 import 'package:event_booking_app/constants/app_colors.dart';
 import 'package:event_booking_app/constants/app_images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -247,9 +248,80 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
+                  SizedBox(height: 20.0),
                   Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(),
+                      margin: EdgeInsets.only(right: 20),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(),
+                      child: Stack(children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            Assets.imagesEvent,
+                            height: 200,
+                            width: MediaQuery.of(context).size.width,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 10, top: 10),
+                          width: 50,
+                          decoration: BoxDecoration(
+                              color: kSecondaryColor,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Center(
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              "Feb\n25",
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: kPrimaryColor),
+                            ),
+                          ),
+                        )
+                      ])),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        textAlign: TextAlign.center,
+                        "Concerts",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: kPrimaryColor),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          "\$50",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff6351ec),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.location_on),
+                      Text(
+                        textAlign: TextAlign.center,
+                        "Lahore,Pakistan",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xff6351ec),
+                        ),
+                      ),
+                    ],
                   )
                 ],
               ),
