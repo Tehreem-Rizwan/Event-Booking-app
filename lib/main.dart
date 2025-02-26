@@ -1,3 +1,5 @@
+import 'package:event_booking_app/view/screens/detail_page.dart';
+import 'package:event_booking_app/view/screens/home.dart';
 import 'package:event_booking_app/view/widgets/bottomnav.dart';
 import 'package:flutter/material.dart';
 
@@ -12,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BottomNav(),
+      home: DetailPage(),
     );
   }
 }

@@ -24,27 +24,54 @@ class _DetailPageState extends State<DetailPage> {
                 width: MediaQuery.of(context).size.width,
                 fit: BoxFit.cover,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      padding: EdgeInsets.all(8),
-                      margin: EdgeInsets.only(top: 40, left: 20.0),
-                      decoration: BoxDecoration(
-                          color: kSecondaryColor,
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Icon(
-                        Icons.arrow_back_ios_new_outlined,
-                        color: kPrimaryColor,
+              Container(
+                height: MediaQuery.of(context).size.height / 2,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(8),
+                        margin: EdgeInsets.only(top: 40, left: 20.0),
+                        decoration: BoxDecoration(
+                            color: kSecondaryColor,
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Icon(
+                          Icons.arrow_back_ios_new_outlined,
+                          color: kPrimaryColor,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(width: MediaQuery.of(context).size.width)
-                ],
+                    Container(
+                      padding: EdgeInsets.only(left: 20),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(color: Colors.black45),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            textAlign: TextAlign.center,
+                            "Concerts",
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: kSecondaryColor),
+                          ),
+                          Row(
+                            children:[
+                              Icon(Icons.calendar_month)
+                            ]
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               )
             ])
           ],
