@@ -62,18 +62,50 @@ class _DetailPageState extends State<DetailPage> {
                                 fontWeight: FontWeight.bold,
                                 color: kSecondaryColor),
                           ),
-                          Row(
-                            children:[
-                              Icon(Icons.calendar_month)
-                            ]
-                          )
+                          Row(children: [
+                            Icon(Icons.calendar_month, color: kSecondaryColor),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Text(
+                              textAlign: TextAlign.center,
+                              "27 Feb 2025",
+                              style: TextStyle(
+                                  fontSize: 19, color: Colors.white70),
+                            ),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            Icon(Icons.location_on_outlined,
+                                color: kSecondaryColor),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Text(
+                              textAlign: TextAlign.center,
+                              "Lahore, Pakistan",
+                              style: TextStyle(
+                                  fontSize: 19, color: Colors.white70),
+                            ),
+                          ]),
+                          SizedBox(
+                            height: 20,
+                          ),
                         ],
                       ),
                     )
                   ],
                 ),
               )
-            ])
+            ]),
+            Text(
+              textAlign: TextAlign.center,
+              "About Event",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: kPrimaryColor),
+            ),
           ],
         ),
       ),
